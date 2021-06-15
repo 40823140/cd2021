@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='關於.html'>關於</a><li class='has-children'><a href='stage1.html'>stage1</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li class='has-children'><a href='W2.html'>W2</a><ul class='dropdown'><li><a href='利用Hamachi建立虛擬網路.html'>利用Hamachi建立虛擬網路</a></li></ul><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a></li></ul><li class='has-children'><a href='stage2.html'>stage2</a><ul class='dropdown'><li><a href='W5.html'>W5</a><li class='has-children'><a href='W6.html'>W6</a><ul class='dropdown'><li><a href='Heroku小組網站.html'>Heroku小組網站</a><li><a href='小組產品.html'>小組產品</a></li></ul><li><a href='W7.html'>W7</a><li><a href='W8.html'>W8</a><li><a href='W9.html'>W9</a></li></ul><li class='has-children'><a href='stage3.html'>stage3</a><ul class='dropdown'><li class='has-children'><a href='W10.html'>W10</a><ul class='dropdown'><li><a href='task1.html'>task1</a><li><a href='task2.html'>task2</a><li><a href='API操作影片.html'>API操作影片</a></li></ul><li class='has-children'><a href='W11.html'>W11</a><ul class='dropdown'><li><a href='task3.html'>task3</a></li></ul><li><a href='W12.html'>W12</a><li><a href='W13.html'>W13</a><li class='has-children'><a href='W14.html'>W14</a><ul class='dropdown'><li><a href='task4.html'>task4</a><li><a href='影片.html'>影片</a></li></ul><li class='has-children'><a href='W15.html'>W15</a><ul class='dropdown'><li><a href='運動學1.html'>運動學1</a><li><a href='運動學2.html'>運動學2</a><li><a href='W16.html'>W16</a></li>
+                     <li><a href='關於.html'>關於</a><li class='has-children'><a href='stage1.html'>stage1</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li class='has-children'><a href='W2.html'>W2</a><ul class='dropdown'><li><a href='利用Hamachi建立虛擬網路.html'>利用Hamachi建立虛擬網路</a></li></ul><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a></li></ul><li class='has-children'><a href='stage2.html'>stage2</a><ul class='dropdown'><li><a href='W5.html'>W5</a><li class='has-children'><a href='W6.html'>W6</a><ul class='dropdown'><li><a href='Heroku小組網站.html'>Heroku小組網站</a><li><a href='小組產品.html'>小組產品</a></li></ul><li><a href='W7.html'>W7</a><li><a href='W8.html'>W8</a><li><a href='W9.html'>W9</a></li></ul><li class='has-children'><a href='stage3.html'>stage3</a><ul class='dropdown'><li class='has-children'><a href='W10.html'>W10</a><ul class='dropdown'><li><a href='task1.html'>task1</a><li><a href='task2.html'>task2</a><li><a href='API操作影片.html'>API操作影片</a></li></ul><li class='has-children'><a href='W11.html'>W11</a><ul class='dropdown'><li><a href='task3.html'>task3</a></li></ul><li><a href='W12.html'>W12</a><li><a href='W13.html'>W13</a><li class='has-children'><a href='W14.html'>W14</a><ul class='dropdown'><li><a href='task4.html'>task4</a><li><a href='影片.html'>影片</a></li></ul><li class='has-children'><a href='W15.html'>W15</a><ul class='dropdown'><li><a href='運動學1.html'>運動學1</a><li><a href='運動學2.html'>運動學2</a><li><a href='W16.html'>W16</a><li><a href='W17.html'>W17</a></li>
                       </ul>
                 </nav>
               </div>
@@ -135,8 +135,159 @@ img.add_border {
         </header>
     <div id="tipue_search_content">W15 << <a href='W15.html'>Previous</a> <a href='運動學2.html'>Next</a> >> 運動學2<br /><h1>運動學1</h1>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/IKOGwoJ2HLk" title="YouTube video player" width="560"></iframe></p>
+<p>We saw this simple two-link robot in the previous lecture about forward kinematics.</p>
+<p>我們在上一堂關於正向運動學的講座中看到了這個簡單的雙連桿</p>
+<p>The tooltip pose of this robot is described simply by two numbers,</p>
+<p>這個連桿的工具提示動作簡單的用兩個數字來描述</p>
+<p>the coordinates x and y with respect to the world coordinate frame.</p>
+<p>相對於世界坐標系的坐標x和y</p>
+<p>So, the problem here is that given x and y,</p>
+<p>所以，這裡的問題是給定x和y，</p>
+<p>we want to determine the joined angles, Q1 and Q2.</p>
+<p>我們想要確定連接的角度，Q1和Q2。</p>
+<p>The solution that we’re going to follow in this particular section is a geometric one.</p>
+<p>在這個特殊的部分，我們將要遵循的解是一個幾何解。</p>
+<p>We’re going to start with a simple piece of construction.</p>
+<p>我們將從一塊簡單的結構開始。</p>
+<p>We’re going to overlay the red triangle on top of our robot.</p>
+<p>我們要把紅色三角形覆蓋在連桿上面。</p>
+<p>We know that the end point coordinate is x,y,</p>
+<p>我們知道終點坐標是x，y，</p>
+<p>so the vertical height of the triangle is y, the horizontal width is x.</p>
+<p>所以三角形的垂直高度是y，水平宽度是x。</p>
+<p>And, using Pythagoras theorem, we can write r squared equals x squared plus y squared.</p>
+<p>利用畢式定理，我們可以寫出r的平方等於x的平方加上y的平方。</p>
+<p>So far, so easy.</p>
+<p>到目前為止，一切都很簡單。</p>
+<p>Now, we’re going to look at this triangle highlighted here in red and we want to determine</p>
+<p>the angle alpha.</p>
+<p>現在，我們要看一下這裡用紅色突出顯示的這個三角形，我們想要確定。角度Alpha。</p>
+<p>In order to do that, we need to use the cosine rule.</p>
+<p>為了達成這一點，我們需要使用餘弦定理。</p>
+<p>And, if you’re a little rusty on the cosine rule, here is a bit of a refresher.</p>
+<p>如果你對余弦定理有點不熟悉。這裡有一個複習。</p>
+<p>We have an arbitrary triangle.</p>
+<p>我們有一個任意的三角形。</p>
+<p>We don’t have to have any right angles in it</p>
+<p>我們不用有任何直角。</p>
+<p>and we’re going to label the length of this edge as A and the angle</p>
+<p>opposite that edge, we’re going to label as little a.</p>
+<p>我們將這條邊的長度標記為A角。</p>
+<p>另外在那個邊緣的對面，我們將標記為小a角。</p>
+<p>And, we do the same for this edge and this</p>
+<p>angle, and this edge and this angle.</p>
+<p>我們對邊邊和這角度，以及邊邊和這個角度做同樣的事</p>
+<p>So, all together, the sides are labelled capitals</p>
+<p>A, B and C, and the angles are labelled little</p>
+<p>a, little b, and little c.</p>
+<p>所以所有邊都標記為大寫字母 A、B 和 C，角標記為小 a、小 b 和小 c。</p>
+<p>So, the cosine rule is simply this relationship here.</p>
+<p>所以餘弦定理在這裡就是這種關係</p>
+<p>It’s a bit like Pythagoras’ theorem except for this extra term on the end with the cos a in it.</p>
+<p>它有點像畢氏定理，除了末尾有額外的 cos a 。</p>
+<p>Now, let’s apply the cosine rule to the particular triangle we looked at a moment ago.</p>
+<p>現在，我們將餘弦定理應用於我們剛才看到的特定三角形。</p>
+<p>It’s pretty straightforward to write down this particular relationship.</p>
+<p>寫下這種特殊關係式是非常簡單。</p>
+<p>We can isolate the term cos alpha which gives us the angle alpha that we’re interested in.</p>
+<p>我們可以分離出 cos <span class="Y2IQFc" lang="zh-TW">α</span>項，它給出了我們<span>α角</span>。</p>
+<p>And, it’s defined in terms of the constant link lengths, A1 and A2 and the position of the end effector, x and y.</p>
+<p>而且，它是根據恆定連桿長度 A1 和 A2 以及末端執行器的位置 x 和 y 定義的。</p>
+<p>We can write this simple relationship between the angles alpha and Q2.</p>
+<p>我們可以寫出角度<span> </span><span>α</span><span> </span>和 Q2 之間的關係。</p>
+<p>And, we know from the shape of the cosine function that cos of Q2 must be equal to negative of cos alpha.</p>
+<p>而且，我們從餘弦定理的形狀知道，Q2 的 cos 必須等於 -cos<span> </span><span>α</span> 。</p>
+<p>This time, let’s just write an expression</p>
+<p>for the cosine of the joined angle Q2.</p>
+<p>我們只寫一個表達式 對於連接角 Q2 的餘弦。</p>
+<p>Now, we’re going to draw yet another red</p>
+<p>triangle and we’re going apply some simple trigonometry here.</p>
+<p>現在，我們將繪製另一個紅色三角形，並在此處應用一些簡單的三角函數。</p>
+<p>If we know Q2, then we know this length and this length of the red triangle.</p>
+<p>如果我們知道 Q2，那我們就知道這個長度和這個紅色三角形的長度。</p>
+<p>We can write this relationship for the sine of the joined angle Q2.</p>
+<p>我們可以寫出連接角 Q2 的正弦關係。</p>
+<p>Now, we can consider this bigger triangle whose angle is beta and this side length of</p>
+<p>the triangle is given here in blue.</p>
+<p>現在，我們可以考慮這個更大的三角形，它的角是β，三角形的這條邊長在這裡用藍色表示。</p>
+<p>And, the length of the other side of the triangle is this.</p>
+<p>另外，三角形另一邊的長度是這個。</p>
+<p>So, now we can write an expression for the angle beta in terms of these parameters here.</p>
+<p>所以，我們可以在這裡根據這些參數編寫角度 <span>β</span><span> </span>的表達式。</p>
+<p>Going back to the red triangle that we drew earlier, we can establish a relationship between</p>
+<p>Q1 and the angle beta.</p>
+<p>回到之前畫的紅色三角形，我們可以建立Q1和角度β之間的關係。</p>
+<p>Introduce yet another angle, this one gamma and we can write a relationship between the</p>
+<p>angle gamma and the tooltip coordinates x and y.</p>
+<p>導入另一個角度，這個<span>γ</span>，我們可以寫出<span>γ角</span>和工具提示坐標 x 和 y 之間的關係。</p>
+<p>Now, we can write a simple relationship between the angles that we’ve constructed, gamma</p>
+<p>and beta and the joined angle we’re interested in which is Q1.</p>
+<p>我們可以在我們構建的角度<span>γ</span><span> </span>和<span> </span><span>β</span><span> </span>與我們感興趣的連接角度 Q1 之間寫出一個簡單的關係。</p>
+<p>And, the total relationship looks something like this.</p>
+<p>所以，整體關係看起來像這樣。</p>
+<p>Quite a complex relationship, it gives us the angle of joined one, that’s Q1 in terms</p>
+<p>of the end effector coordinates y and x,</p>
+<p>相當複雜的關係，它為我們提供了連接的角度，即末端執行器坐標 y 和 x 的 Q1，</p>
+<p>and a bunch of constants, a1 and a2, and it’s</p>
+<p>also a function of the second joint angle, Q2.</p>
+<p>和一堆常數 a1 和 a2，它也是第二個關節角度 Q2 的函數。</p>
+<p>So, let’s summarize what it is that we have derived here.</p>
+<p>所以，我們總結一下。</p>
+<p>We have an expression for the cosine of Q2</p>
+<p>and we have an expression for Q1.</p>
+<p>我們有 Q2 的餘弦表達式和Q1 的表達式。</p>
+<p>Now, the cosine function is symmetrical about 0.</p>
+<p>現在，餘弦函數關於 0 對稱。</p>
+<p>so, if we know the value of the cosine of Q2,</p>
+<p>所以，如果我們知道 Q2 的餘弦值，</p>
+<p>then there are two possible solutions,</p>
+<p>那麼有兩種可能解決方法，</p>
+<p>a positive angle and a negative angle.</p>
+<p>一個正角和一個負角。</p>
+<p>We’re going to explicitly choose the positive angle, which means that I can write this expression here.</p>
+<p>我們將明確選擇正角，表示我可以在這裡寫這個表達式。</p>
+<p>And now, we have what we call the inverse kinematic solution for this two-link robot.</p>
+<p>現在，我們有了這個雙連桿的逆運動學解決方法。</p>
+<p>We have an expression for the two joined angles,</p>
+<p>我們有兩個連接角的表達式，</p>
+<p>Q1 and Q2 in terms of the end effector pose x and y, and a bunch of constants.</p>
+<p>Q1 和 Q2 就末端執行器姿勢 x 和 y 而言，以及一堆常數。</p>
+<p>You notice that the two equations are not independent.</p>
+<p>你會注意到這兩個方程式不是沒有獨立的的。</p>
+<p>The equation for Q1, in fact, depends on the solution for Q2.</p>
+<p>其實，Q1 的方程取決於 Q2 的解。</p>
+<p>In this case, Q2 is negative and we’re going to write the solution for Q2 with a negative</p>
+<p>sign in front of the inverse cosine.</p>
+<p>在這種情況下，Q2 是負數，我們將在反餘弦前用負號編寫表示 Q2 的解。</p>
+<p>Now, we need to solve for Q1, so we’re going to introduce this particular red triangle,</p>
+<p>現在，我們需要求解 Q1，所以我們將介紹這個特殊的紅色三角形，</p>
+<p>the angle beta that we solved previously,</p>
+<p>我們之前求的β角，</p>
+<p>and the angle gamma which is defined in terms of y and x.</p>
+<p>以及根據 y 和 x 定義的<span>γ角</span>。</p>
+<p>Now, we write a slightly different relationship between Q1,</p>
+<p>我們現在寫出 Q1 之間略有不同的關係，</p>
+<p>gamma and beta, different to what we had before.</p>
+<p><span>y</span><span> </span>和<span> </span><span>β</span>，跟我們之前的不一樣。</p>
+<p>There’s a change of sign involved.</p>
+<p>這些也牽涉到符號改變。</p>
+<p>Then, we can substitute all that previous equation and come up with this expression</p>
+<p>for Q1.</p>
+<p>然後我們可以替換之前的所有等式並得出 Q1 的這個方程式。</p>
+<p>Again, there is a change of sign here.</p>
+<p>再一次 這時候這裡的符號不一樣了</p>
+<p>Previously, this was a negative sign.</p>
+<p>之前，這是一個負號。</p>
+<p>And, here in summary form is the solution</p>
+<p>而且，這裡是總結形式的解決方法</p>
+<p>for the inverse kinematics of our two-link robot when it is in this particular configuration,<br/>where Q2 is negative.</p>
+<p>對於我們的雙連桿在這種特定配置下的逆運動學，其中 Q2 為負。</p>
+<p>Let’s compare the two solutions, the case where q2 is positive and the case where q2 is negative.</p>
+<p>我們比較兩個解決方案，q2 為正的情況和 q2 為負的情況。</p>
 <p></p>
-<p></p>
+<p>本影片最後導出的方程式：</p>
+<p><img alt="" height="233" src="./../images/動力1.png" width="520"/></p>
+<p><span>X，Y，a1，a2 是已知先求出q2以後再倒入第二個公式再求出q1</span></p>
 <br />W15 << <a href='W15.html'>Previous</a> <a href='運動學2.html'>Next</a> >> 運動學2</div>
         
     <!-- footer -->
